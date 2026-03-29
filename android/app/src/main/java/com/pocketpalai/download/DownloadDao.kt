@@ -1,4 +1,4 @@
-package com.pocketpal.download
+package com.locai.download
 
 import androidx.room.*
 import kotlinx.coroutines.flow.Flow

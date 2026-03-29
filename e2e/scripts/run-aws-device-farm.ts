@@ -53,7 +53,7 @@ const DEVICE_POOL_ARN_IOS = process.env.AWS_DEVICE_POOL_ARN_IOS;
 // Note: iOS requires an IPA built for real devices (not simulator)
 // The simulator .app from yarn ios:build:e2e will NOT work on Device Farm
 const DEFAULT_ANDROID_APP = '../android/app/build/outputs/apk/release/app-release.apk';
-const DEFAULT_IOS_APP = '../ios/build/PocketPal.ipa';
+const DEFAULT_IOS_APP = '../ios/build/LOCAI.ipa';
 
 // Parse command line arguments
 function parseArgs(): {platform: 'ios' | 'android'; appPath: string; allModels: boolean} {
@@ -568,7 +568,7 @@ async function main(): Promise<void> {
         projectArn: PROJECT_ARN,
         appArn,
         devicePoolArn,
-        name: `PocketPal E2E - ${platform}${allModels ? ' (all models)' : ''} - ${new Date().toISOString()}`,
+        name: `LOCAI E2E - ${platform}${allModels ? ' (all models)' : ''} - ${new Date().toISOString()}`,
         test: {
           type: 'APPIUM_NODE',
           testPackageArn,

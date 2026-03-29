@@ -1,4 +1,4 @@
-# Weblate configuration for PocketPal AI
+# Weblate configuration for LOCAI
 
 [weblate]
 url = https://hosted.weblate.org/
@@ -6,8 +6,8 @@ url = https://hosted.weblate.org/
 [keys]
 # API key will be set via environment variable WEBLATE_TOKEN
 
-[pocketpal-ai/translations]
-url = https://hosted.weblate.org/projects/pocketpal-ai/translations/
+[locai/translations]
+url = https://hosted.weblate.org/projects/locai/translations/
 
 # File format configuration
 file_format = json-nested

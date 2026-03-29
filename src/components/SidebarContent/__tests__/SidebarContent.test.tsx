@@ -25,7 +25,7 @@ const renderSidebarContent = (props: DrawerContentComponentProps) => (
 
 const TestNavigator = () => (
   <NavigationContainer>
-    <Drawer.Navigator drawerContent={renderSidebarContent}>
+    <Drawer.Navigator id="test-drawer" drawerContent={renderSidebarContent}>
       <Drawer.Screen name="Chat" component={ChatScreen} />
       <Drawer.Screen name="Models" component={ModelsScreen} />
       <Drawer.Screen name="Settings" component={SettingsScreen} />

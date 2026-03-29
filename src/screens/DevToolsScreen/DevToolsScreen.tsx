@@ -205,6 +205,7 @@ export const DevToolsScreen: React.FC = () => {
 
   return (
     <Stack.Navigator
+      id="dev-tools-stack"
       initialRouteName="DevToolsHome"
       screenOptions={screenOptions}>
       <Stack.Screen

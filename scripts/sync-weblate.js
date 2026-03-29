@@ -11,7 +11,7 @@ const path = require('path');
 const WEBLATE_API_URL =
   process.env.WEBLATE_API_URL || 'https://hosted.weblate.org/api';
 const WEBLATE_TOKEN = process.env.WEBLATE_TOKEN;
-const PROJECT_SLUG = process.env.WEBLATE_PROJECT || 'pocketpal-ai';
+const PROJECT_SLUG = process.env.WEBLATE_PROJECT || 'locai';
 const COMPONENT_SLUG = process.env.WEBLATE_COMPONENT || 'translations';
 
 if (!WEBLATE_TOKEN) {
@@ -140,7 +140,7 @@ Commands:
 Environment variables:
   WEBLATE_TOKEN     - Your Weblate API token (required)
   WEBLATE_API_URL   - Weblate API URL (default: https://hosted.weblate.org/api)
-  WEBLATE_PROJECT   - Project slug (default: pocketpal-ai)
+  WEBLATE_PROJECT   - Project slug (default: locai)
   WEBLATE_COMPONENT - Component slug (default: translations)
       `);
       process.exit(1);

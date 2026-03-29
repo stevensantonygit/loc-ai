@@ -2,7 +2,7 @@
 #
 # 1. Developer adds/changes English strings in src/locales/en.json, merges PR to main
 # 2. This workflow auto-uploads en.json to Weblate on merge
-# 3. Translators work in Weblate UI at https://hosted.weblate.org/translate/pocketpal-ai
+# 3. Translators work in Weblate UI at https://hosted.weblate.org/translate/locai
 # 4. Weblate auto-creates a PR with translated files (requires Weblate admin to
 #    configure push mode to GitHub)
 # 5. Human reviews and merges the Weblate PR

@@ -1,8 +1,8 @@
-package com.pocketpal
+package com.locai
 
 import com.facebook.react.bridge.*
 import com.facebook.react.module.annotations.ReactModule
-import com.pocketpal.specs.NativeStorefrontSpec
+import com.locai.specs.NativeStorefrontSpec
 import java.util.Locale
 
 @ReactModule(name = NativeStorefrontSpec.NAME)

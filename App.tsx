@@ -76,6 +76,7 @@ const App = observer(() => {
                 <DeepLinkHandler />
                 <BottomSheetModalProvider>
                   <Drawer.Navigator
+                    id="app-drawer"
                     screenOptions={{
                       headerLeft: () => <HeaderLeft />,
                       drawerStyle: {

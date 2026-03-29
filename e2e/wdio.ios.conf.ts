@@ -34,7 +34,7 @@ export const config: Options.Testrunner = {
       'appium:udid': DEVICE_UDID,
       'appium:automationName': 'XCUITest',
       'appium:app': APP_PATH,
-      'appium:bundleId': 'ai.pocketpal',
+      'appium:bundleId': 'ai.locai',
       'appium:noReset': false,
       'appium:fullReset': false,
       'appium:newCommandTimeout': 300,

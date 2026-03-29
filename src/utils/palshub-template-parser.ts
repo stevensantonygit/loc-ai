@@ -71,8 +71,8 @@ export function parsePalsHubTemplate(template: string): ParsedMustacheTemplate {
   const schema = extractJsonSchema(template);
   const cleanSystemPrompt = cleanTemplate(template);
 
-  // Convert schema to PocketPal format
-  const parameterSchema = schema ? convertJsonSchemaToPocketPal(schema) : [];
+  // Convert schema to LOCAI format
+  const parameterSchema = schema ? convertJsonSchemaToLOCAI(schema) : [];
   const defaultParameters = schema
     ? extractDefaultParametersFromSchema(schema)
     : {};
@@ -85,9 +85,9 @@ export function parsePalsHubTemplate(template: string): ParsedMustacheTemplate {
 }
 
 /**
- * Converts JSON schema to PocketPal ParameterDefinition format
+ * Converts JSON schema to LOCAI ParameterDefinition format
  */
-function convertJsonSchemaToPocketPal(
+function convertJsonSchemaToLOCAI(
   schema: Record<string, MustacheSchemaDefinition>,
 ): ParameterDefinition[] {
   const parameterSchema: ParameterDefinition[] = [];
@@ -97,21 +97,21 @@ function convertJsonSchemaToPocketPal(
       continue;
     }
 
-    // Map schema types to PocketPal types
-    let pocketPalType: ParameterDefinition['type'];
+    // Map schema types to LOCAI types
+    let locaiType: ParameterDefinition['type'];
     switch (definition.type) {
       case 'select':
-        pocketPalType = 'select';
+        locaiType = 'select';
         break;
       case 'text':
       default:
-        pocketPalType = 'text';
+        locaiType = 'text';
         break;
     }
 
     const paramDef: ParameterDefinition = {
       key,
-      type: pocketPalType,
+      type: locaiType,
       label: definition.label || key,
       required: definition.required || false,
       placeholder: definition.placeholder,
@@ -119,7 +119,7 @@ function convertJsonSchemaToPocketPal(
     };
 
     // Add options for select fields
-    if (pocketPalType === 'select' && Array.isArray(definition.options)) {
+    if (locaiType === 'select' && Array.isArray(definition.options)) {
       paramDef.options = definition.options;
     }
 

@@ -1,4 +1,4 @@
-# PocketPal E2E Tests
+# LOCAI E2E Tests
 
 End-to-end tests using Appium + WebDriverIO for local devices and AWS Device Farm.
 
@@ -109,7 +109,7 @@ Both `wdio.ios.local.conf.ts` and `wdio.android.local.conf.ts` accept these env 
 | `E2E_DEVICE_NAME` | `iPhone 17 Pro` | `emulator-5554` | Device/simulator name |
 | `E2E_PLATFORM_VERSION` | `26.0` | `16` | OS version |
 | `E2E_DEVICE_UDID` | _(none)_ | _(none)_ | Device UDID (required for real devices) |
-| `E2E_APP_PATH` | `../ios/build/.../PocketPal.app` | `../android/.../app-release.apk` | Path to built app |
+| `E2E_APP_PATH` | `../ios/build/.../LOCAI.app` | `../android/.../app-release.apk` | Path to built app |
 | `E2E_APPIUM_PORT` | `4723` | `4723` | Appium server port |
 | `E2E_XCODE_ORG_ID` | _(none)_ | N/A | Apple Team ID (required for real iOS devices) |
 | `E2E_XCODE_SIGNING_ID` | `Apple Development` | N/A | Code signing identity for WDA |
